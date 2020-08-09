@@ -1,0 +1,55 @@
+{% extends "principal.html" %}
+{% block title %}<title>Insertar Producto</title>{% endblock %}
+{% block content %}
+
+<h1>{{Producto}}</h1>
+
+<form action="" method="Post">
+    <div class="container">
+        <div class="caja">
+        <div class="row row justify-content-md-center">
+            <div class="col col-lg-2">
+           
+        <h3 class="font-weight-bold mb-0">Producto</h3>
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    {% for field in form %}
+        <div class="field_container">
+            {{ field.errors }}
+            {{ field.label_tag }} </br>
+            {{ field }}
+        </div>
+    {% endfor %}
+    <button class="btn btn-success mtop16" type="submit">{{accion}}</button>
+</div>
+</div>
+</div>
+    </div>
+</form>
+
+
+{% endblock %}
+
+
+
+<!-- <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Insertar Producto</h2>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form action="" method="post">
+            
+            <div class="modal-body">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary" type="submit">{{accion}}</button>
+            </div>
+        </form>
+    </div>
+</div> -->

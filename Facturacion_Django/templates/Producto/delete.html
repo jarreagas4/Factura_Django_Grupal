@@ -1,0 +1,59 @@
+{% extends "principal.html" %}
+{% block title %}<title>Eliminar Cliente</title>{% endblock %}
+{% block content %}
+<div>
+    <p>
+
+
+    </p>
+    <p>
+
+    </p>
+    <br>
+
+</br>
+<section class="bg-mix py-3">
+    <div class="container">
+        <div class="card rounded-0">
+            <div class="card-body">
+    <form action="" method="Post">
+        {% csrf_token %}
+        <h1 id="prod" class="font-weight-bold mb-0">Estas Seguro de Eliminar El Producto: {{ Producto.descripcion }}</h1>
+        <p>
+
+            
+        </p>
+        <div class="box text-center">
+        <button id="producto" type="submit" class="btn btn-danger btn-circle btn-lg"><span class="fa fa-trash"></span> Eliminar</button>
+        <button class="btn btn-primary btn-circle btn-lg"><a href="{% url 'listarProducto' %}"><span class="fas fa-redo-alt "></span> Cancelar</a></button>
+    </div>
+    </form>
+            </div>
+        </div>
+    </div>
+    </section>
+{% endblock %}
+
+
+
+<!-- <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Eliminar {{Producto.descripcion}}</h2>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="modal-body">
+                <p>Estas Seguro de Eliminar El Producto: {{ Producto.descripcion }}</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary" type="submit">Confirmar</button>
+            </div>
+        </form>
+    </div>
+</div> -->
+

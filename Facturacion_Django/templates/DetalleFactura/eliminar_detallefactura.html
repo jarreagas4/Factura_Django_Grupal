@@ -1,0 +1,37 @@
+{% extends "principal.html" %}
+{% block title %}<title>Eliminar Detalle Factura</title>{% endblock %}
+{% block content %}
+    
+    <div>
+        <p>
+
+
+        </p>
+        <p>
+
+        </p>
+        <br>
+
+    </br>
+    </div>
+    <section class="bg-mix py-3">
+        <div class="container">
+            <div class="card rounded-0">
+                <div class="card-body">
+        <form action="" method="Post">
+            {% csrf_token %}
+            <h1 id="prod" class="font-weight-bold mb-0">Estas Seguro de Eliminar el detalle de la factura: {{DetalleFactura.factura.cliente.nombre}}</h1>
+            <p>
+    
+                
+            </p>
+            <div class="box text-center">
+            <button id="producto" type="submit" class="btn btn-danger btn-circle btn-lg"><span class="fa fa-trash"></span> Eliminar</button>
+            <button class="btn btn-primary btn-circle btn-lg"><a href="{% url 'listardetallefactura' %}"><span class="fas fa-redo-alt "></span> Cancelar</a></button>
+        </div>
+        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
